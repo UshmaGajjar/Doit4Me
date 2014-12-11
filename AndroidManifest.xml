@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.doit4me"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.doit4me.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.example.doit4me.MyReceiver"
+            android:enabled="true" >
+        </receiver>
+
+        <activity
+            android:name="com.example.doit4me.AddReminder"
+            android:label="@string/title_activity_add_reminder" >
+        </activity>
+        <activity
+            android:name="com.example.doit4me.Contacts"
+            android:label="@string/title_activity_contacts" >
+        </activity>
+        <activity
+            android:name="com.example.doit4me.EditActivity"
+            android:label="@string/title_activity_edit" >
+        </activity>
+    </application>
+
+</manifest>
